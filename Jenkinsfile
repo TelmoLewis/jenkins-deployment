@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage("k8s"){
                 steps{
-                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'cluster', contextName: '', credentialsId: 'jenkins', namespace: 'Default', serverUrl: 'https://494DC0F033B24CB1F89C165EB78571E3.sk1.eu-west-2.eks.amazonaws.com']]) 
+                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'cluster', contextName: '', credentialsId: 'jenkins', namespace: 'Default', serverUrl: 'https://CA37CE954E47CBE48FBA49185D7009C1.yl4.eu-west-2.eks.amazonaws.com']]) 
                     {
                     sh 'curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.20.5/bin/linux/amd64/kubectl"'
                     sh 'chmod u+x ./kubectl'
