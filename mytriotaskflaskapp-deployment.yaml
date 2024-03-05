@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mytriotaskflaskapp
+  labels:
+    app: mytriotaskflaskapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mytriotaskflaskapp
+  template:
+    metadata:
+      labels:
+        app: mytriotaskflaskapp
+    spec:
+      containers:
+      - name: mytriotaskflaskapp
+        image: chrisreeves1/mytriotaskflaskapp:2.0
+        ports:
+        - containerPort: 5000
